@@ -1,6 +1,6 @@
-// import "slick-carousel/slick/slick.css";
-// import "slick-carousel/slick/slick-theme.css";
-import React, { useState, createContext } from "react";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+// import React, { useState, createContext } from "react";
 
 
 
@@ -21,6 +21,7 @@ import ProtectedRoute from "./auth/ProtectedRoute";
 import Search from "./components/Hero/Search";
 import TodoList from "./components/Todo/TodoList";
 
+
 export const UserContext = createContext();
 
 
@@ -38,6 +39,7 @@ function App() {
         <Routes>
           <Route path="/Search" element={<Search />} />
           <Route path="/" element={<LoginPage />} />
+         
 
           <Route
             path="/home"
@@ -47,6 +49,8 @@ function App() {
                   onMovieCategoryChange={setMovieCategory}
                   onTVCategoryChange={setTVCategory} 
                 />
+
+                <HeroSlider/>
 
                 <TopMovies
                   type="movie"
